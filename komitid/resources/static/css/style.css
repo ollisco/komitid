@@ -1,0 +1,281 @@
+body {
+  height: 100vh;
+  overflow: hidden;
+  background-color: hsl(187deg 54% 68%);
+}
+
+.main {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  grid-template-rows: auto 1fr;
+}
+
+.in_forms {
+  background-color: hsl(23, 99%, 75%);
+  padding: 2rem;
+  border-radius: 2rem;
+  display: grid;
+  grid-template-columns: auto;
+  width: calc(500px - 10vw);
+  text-align: center;
+}
+
+.in_forms input {
+  margin: 1rem;
+  height: 50%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: calc(25px - 0.5vw);
+}
+
+.in_forms .button {
+  margin-top: 2rem;
+  background-color: #4CAF50;
+  cursor: pointer;
+}
+
+.in_forms a {
+  text-decoration: none;
+  color: grey;
+  font-size: calc(30px - 0.5vw);
+}
+
+.in_forms a:hover {
+  color: hotpink;
+  text-decoration: underline;
+}
+
+.default-link {
+  text-decoration: none;
+  color: grey;
+}
+
+.default-link:hover {
+  color: hotpink;
+  text-decoration: underline;
+}
+
+img {
+  margin-top: 5vh;
+}
+
+.infobox {
+  width: calc(800px - 2vw);
+  height: 60%;
+  border-radius: 2rem;
+  background-color: hsl(23, 99%, 75%);
+  box-shadow: 1rem 1rem grey;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  place-items: center;
+}
+
+.infobox form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  margin-top: 5%;
+}
+
+.infobox form .button {
+  background-color: #4CAF50;
+}
+
+.infobox form input {
+  border-radius: 2rem;
+  padding: 1rem;
+  width: 50%;
+}
+
+.infobox .results {
+  background-color: white;
+  height: 60%;
+  width: 86%;
+  border-radius: 2rem;
+  border: 0.1rem solid black;
+  overflow-y: scroll;
+}
+
+.infobox .results::-webkit-scrollbar {
+  display: none;
+}
+
+.main img {
+  cursor: pointer;
+}
+
+.result {
+  height: 10vh;
+  border: 1px solid black;
+  border-radius: 2rem;
+  margin: 1% 1% 1% 1%;
+  background-color: #f8f8ff;
+  box-shadow: 0.2rem 0.2rem grey;
+  display: grid;
+  grid-template-rows: 8vh 1fr;
+  overflow-y: hidden;
+  transition: height 0.5s;
+}
+
+.result:hover {
+  height: 20vh;
+}
+
+.result .overview {
+  display: grid;
+  grid-template-columns: auto auto auto 1fr;
+  text-align: center;
+  height: 100%;
+  align-items: center;
+}
+
+.result .overview h1 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.result .details {
+  height: 100%;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: row;
+  user-select: none;
+}
+
+.details::-webkit-scrollbar {
+  height: 1px;
+  transition: height 0.5s;
+}
+
+.result:hover .details::-webkit-scrollbar {
+  height: 5px;
+}
+
+.details::-webkit-scrollbar-thumb {
+  background-color: hsl(187deg 54% 68%);
+}
+
+.result .details .interval {
+  color: white;
+  text-shadow: 1px 1px black;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.result .details .interval h2 {
+  margin-top: 0.1vh;
+  font-size: 1.8vh;
+  margin-bottom: 1px;
+}
+
+.result .details .interval p {
+  margin-top: 0;
+}
+
+.result .details .blålinje {
+  background-color: #0089ca;
+}
+
+.result .details .blåbuss {
+  background-color: #0089ca;
+}
+
+.result .details .Roslagsbanan {
+  background-color: #9f599a;
+}
+
+.result .details .rödalinje {
+  background-color: #d71d24;
+}
+
+.result .details .buss {
+  background-color: #d71d24;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 2rem;
+  background-color: hsl(23, 99%, 75%);
+  text-align: center;
+}
+
+.error h1 {
+  font-size: 15rem;
+  margin: 1rem;
+}
+
+.error h2 {
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+.your-alarm {
+  font-size: 2rem;
+  margin: 1rem;
+ }
+
+.the-alarm {
+  font-size: 15rem;
+  margin: 1rem;
+}
+
+.error a {
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+.profil form {
+  display: flex;
+  flex-direction: column;
+}
+
+.profil form .button {
+  background-color: #4CAF50;
+}
+
+.profil span {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profil input {
+  border-radius: 1rem;
+  background-color: #f8f8ff;
+  padding: 0.5rem;
+}
+
+.options {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.option {
+  flex: 1;
+  margin: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.option h1 {
+  font-size: 3rem;
+}
+
+.option button {
+  height: 5rem;
+  background-color: #4CAF50;
+  cursor: pointer;
+  width: 80%;
+  margin-top: 2rem;
+}
