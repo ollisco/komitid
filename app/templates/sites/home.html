@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="options">
+    <div class="message option">
+      <h1>Komitid alarm</h1>
+      <button onclick="window.location.href='{{ url_for('alarm') }}'" type="button"></button>
+    </div>
+    <div class="message option">
+      <h1>SL-resa</h1>
+      <button onclick="window.location.href='{{ url_for('sltrip') }}'" type="button"></button>
+    </div>
+</div>
+{% endblock %}

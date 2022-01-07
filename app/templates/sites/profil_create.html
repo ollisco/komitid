@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="message profil">
+    <h1>Skapa en Komitid profil</h1>
+    <form action="/profil" method="post">
+      <span><p>Hem:</p><input type="text" name="hem" placeholder="Adress eller Station"></span>
+      <span><p>Skola:</p><input type="text" name="skola" placeholder="Adress eller Station"></span>
+      <span><p>Tid innan resa:</p><input type="number" name="tid" placeholder="Tid i minuter"></span>
+      <span><p>Ge tillgång till kalender:</p><a class="default-link" target="_blank" href="{{g.link}}">Tryck här</a></span>
+      <span><p>Google token:</p><input type="text" name="token" placeholder="Token"></span>
+      <input type="submit" class="button" value="Submit">
+    </form>
+</div>
+{% endblock %}

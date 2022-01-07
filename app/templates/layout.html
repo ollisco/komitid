@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <title>Komitid</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}"/>
+  </head>
+
+  <body>
+    <div class="main">
+      <img onclick="window.location.href='{{ url_for('home') }}'" src="{{ url_for('static', filename='images/dnon.svg') }}">
+      {% block content %}
+
+      {% endblock %}
+
+
+    </div>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block content %}
+
+{% if g.profile == -1%}
+<div class="message error">
+    <h2>Du har inte skapat en Komitid-profil</h2>
+    <h1>🔞</h1>
+    <a class="default-link" href="{{url_for('profil')}}">Tryck här för att skapa en profil</a>
+</div>
+{% else %}
+{% set alarm, trip = g.profile.get_alarm() %}
+<div class="message alarm">
+    <h2 class="your-alarm">Ditt alarm imorgon</h2>
+    <h1 class="the-alarm">{{ alarm }}</h1>
+    {% if trip != -1 %}
+    <div class="result">
+      <div class="overview">
+        <div class="origin-info">
+          <h1>{{trip.depart_time}}</h1>
+          <p>{{trip.depart_place}}</p>
+        </div>
+        <h1>→</h1>
+        <div class="dest-info">
+          <h1>{{trip.arrive_time}}</h1>
+          <p>{{trip.arrive_place}}</p>
+        </div>
+        <h1>{{trip.travel_time}} min</h1>
+      </div>
+      <div class="details">
+        {% for j in trip.leg_info %}
+        <div class="interval {{j.class}}">
+          <h2>{{j.line}}</h2>
+          <p>{{j.o_name}} {{j.o_time}}</p>
+          <p>↓</p>
+          <p>{{j.d_name}} {{j.d_time}}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+</div>
+{% endif %}
+{% endblock %}
