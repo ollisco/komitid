@@ -4,9 +4,10 @@
   <form action="/sltrip" method="post">
     <input type="text" name="origin" placeholder="Från">
     <input type="text" name="destination" placeholder="Till">
+    <input type="text" name="dest_time" placeholder="Framme: `09:00`">
     <input class="button" type="submit" name="sök" value="Sök">
   </form>
-
+  <p>Visar enligt närmast önskad ankomstid först.</p>
   <div class="results">
     {% for i in g.sl%}
     <div class="result">

@@ -194,6 +194,7 @@ def sl_get_trip(origin, dest, dest_time, dest_date_offset=1):
 
     trip_key = '6828b3e5b4b04737b4311891e825e913'
 
+    print(trip_key, origin_string, dest_string, d1, dest_time)
     get_trip = "http://api.sl.se/api2/TravelplannerV3_1/trip.json?key=" + trip_key + "&" + \
         origin_string + "&" + dest_string + "&Date=" + \
         d1 + "&Time=" + dest_time + "&searchForArrival=1"
@@ -201,5 +202,5 @@ def sl_get_trip(origin, dest, dest_time, dest_date_offset=1):
     req_json = json.loads(req.text)
 
     trips = [Trip(trip) for trip in req_json["Trip"]]
-
+    trips.reverse()
     return trips

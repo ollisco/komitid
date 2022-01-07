@@ -61,7 +61,7 @@ img {
 }
 
 .infobox {
-  width: calc(800px - 2vw);
+  width: calc(800px - 3vw);
   height: 60%;
   border-radius: 2rem;
   background-color: hsl(23, 99%, 75%);
@@ -74,7 +74,7 @@ img {
 .infobox form {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 2fr 2fr 2fr 1fr;
   place-items: center;
   margin-top: 5%;
 }
@@ -91,7 +91,7 @@ img {
 
 .infobox .results {
   background-color: white;
-  height: 60%;
+  height: 95%;
   width: 86%;
   border-radius: 2rem;
   border: 0.1rem solid black;

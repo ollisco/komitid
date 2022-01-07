@@ -35,8 +35,9 @@ def sltrip():
     if request.method == 'POST':
         origin = request.form.get('origin')
         destination = request.form.get('destination')
+        dest_time = request.form.get('dest_time')
 
-        g.sl = sl_get_trip(origin, destination, '09:00')
+        g.sl = sl_get_trip(origin, destination, dest_time)
 
     return render_template('sites/sltrip.html')
 
